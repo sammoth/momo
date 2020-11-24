@@ -1,0 +1,50 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'momo'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=momo",
+                    "--package=momo",
+                ],
+                "filter": {
+                    "name": "momo",
+                    "kind": "bin"
+                }
+            },
+            "program": "${workspaceFolder}/target/debug/momo",
+            "args": ["scan", "/mnt/mp-ro/M/CAT/Korean"],
+            "cwd": "${workspaceFolder}",
+            "sourceLanguages": ["rust"],
+            "sourceMap": {
+              "/rustc/*": "${env:HOME}/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust"
+            }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'momo'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=momo",
+                    "--package=momo"
+                ],
+                "filter": {
+                    "name": "momo",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
