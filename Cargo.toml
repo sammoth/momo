@@ -14,8 +14,6 @@ mime_guess = "2.0.3"
 ffav = "4.3.8"
 ape = "0.3.0"
 directories-next = "2.0.0"
-
-diesel = { version = "1.4.4", features = ["sqlite", "r2d2"] }
-diesel_migrations = "1.4.0"
 evmap = "10.0.2"
 lazy_static = "1.4.0"
+rusqlite = "0.24.1"
